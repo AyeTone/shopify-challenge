@@ -1,13 +1,1 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*,::after,::before{margin:0;box-sizing:border-box}h1,h2,h3,h4,h5,h6,p,span{font-size:1rem;font-weight:500}body{display:flex;justify-content:center}.App{margin:0 auto}.header{font-size:2.3rem;margin:20px 0}.prompt{margin:20px 0;display:flex;flex-direction:column}.prompt__title{font-style:italic}.prompt__textarea{width:100%;margin:10px 0}.prompt__submit{padding:10px 20px;border:none;float:right;font-weight:bolder;color:#fff;background-color:#1da7d5}.prompt__submit:hover{cursor:pointer;background-color:#5fb3ce}.responses{margin:20px 0}.responses__title{margin:20px 0;font-size:2rem}.responses__card{margin:10px 0;padding:15px;background-color:#fefefe;border-radius:5px;box-shadow:0 10px 10px rgba(170,170,170,.506)}.responses__prompt{margin:10px 0;display:grid;grid-template-columns:100px 1fr}.responses__response{margin:10px 0;display:grid;grid-template-columns:100px 1fr}

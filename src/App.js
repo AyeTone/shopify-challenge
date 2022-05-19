@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Prompt from "./components/Prompt";
+import Responses from "./components/Responses";
 
 function App() {
+  const savedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
+  const [answers, setAnswers] = useState(savedAnswers);
+
+  useEffect(() => {
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }, [answers]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Prompt setAnswers={setAnswers} />
+      <Responses answers={answers} />
     </div>
   );
 }

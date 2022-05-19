@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+
+.prompt {
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-style: italic;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  &__submit {
+    padding: 10px 20px;
+    border: none;
+    float: right;
+
+    font-weight: bolder;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 167, 213);
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color: lightblue, $amount: 20%);
+    }
+  }
+}

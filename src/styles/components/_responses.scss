@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+
+@mixin textGap {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: (100px 1fr);
+}
+
+.responses {
+  margin: 20px 0;
+
+  &__title {
+    margin: 20px 0;
+    font-size: $xlFz;
+  }
+
+  &__card {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgb(254, 254, 254);
+
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(170, 170, 170, 0.506);
+  }
+
+  &__prompt {
+    @include textGap;
+  }
+
+  &__response {
+    @include textGap;
+  }
+}
