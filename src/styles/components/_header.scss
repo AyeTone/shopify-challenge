@@ -1,6 +1,14 @@
 @use "../abstracts/variables" as *;
 
 .header {
-  font-size: $xxlFz;
-  margin: 20px 0;
+  width: $container;
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    font-size: $xxlFz;
+    font-weight: bold;
+  }
 }

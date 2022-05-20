@@ -12,3 +12,6 @@
 @use "./components/header";
 @use "./components/prompt";
 @use "./components/responses";
+
+/* utils */
+@use "./utils/breakpoints";

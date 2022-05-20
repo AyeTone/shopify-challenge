@@ -1,3 +1,8 @@
+/* Colors */
+$mainBG: rgb(244, 244, 244);
+$faded: rgba(111, 111, 111, 0.616);
+$normalShd: rgba(128, 128, 128, 0.619);
+
 /* Fonts */
 $baseFont: "Open Sans", sans-serif;
 
@@ -8,5 +13,8 @@ $xlFz: $baseFz * 2;
 $xxlFz: $baseFz * 2.3;
 
 /* widths */
-
 $container: 90%;
+
+/* borders */
+
+$borderRad: 5px;

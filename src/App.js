@@ -14,8 +14,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Prompt setAnswers={setAnswers} />
-      <Responses answers={answers} />
+      <div className="content">
+        <Prompt answers={answers} setAnswers={setAnswers} />
+        <Responses answers={answers} setAnswers={setAnswers} />
+      </div>
     </div>
   );
 }

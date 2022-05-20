@@ -1,18 +1,59 @@
 @use "../abstracts/variables" as *;
+@use "../utils/breakpoints" as *;
+
+@mixin border {
+  border: 1px solid rgba(176, 176, 176, 0.196);
+  border-radius: $borderRad;
+}
 
 .prompt {
-  margin: 20px 0;
+  width: $container;
 
   display: flex;
   flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__title {
     font-style: italic;
   }
 
+  &__select {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+
+  &__dropdown {
+    text-align: center;
+
+    @include border;
+    box-shadow: 3px 6px 10px $normalShd;
+  }
+
   &__textarea {
     width: 100%;
     margin: 10px 0;
+    padding: 10px;
+
+    font-size: $lgFz;
+    background-color: $mainBG;
+    @include border;
+    box-shadow: 3px 10px 10px $normalShd;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include breakpoint(tablet) {
+      height: 500px;
+    }
   }
 
   &__submit {
@@ -22,12 +63,21 @@
 
     font-weight: bolder;
 
+    border-radius: $borderRad;
     color: rgb(255, 255, 255);
     background-color: rgb(29, 167, 213);
 
+    transition: 0.2s;
+
     &:hover {
       cursor: pointer;
-      background-color: darken($color: lightblue, $amount: 20%);
+      background-color: lighten($color: rgb(29, 167, 213), $amount: 10%);
+      box-shadow: 3px 5px 10px $faded;
+    }
+
+    &:active {
+      transform: scale(0.8);
+      box-shadow: 2px 5px 10px $faded;
     }
   }
 }

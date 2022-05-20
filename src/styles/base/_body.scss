@@ -1,6 +1,5 @@
 @use "../abstracts/variables" as *;
 
 body {
-  display: flex;
-  justify-content: center;
+  background-color: $mainBG;
 }
