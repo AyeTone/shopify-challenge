@@ -31,7 +31,7 @@
   &__content {
     padding: 20px;
     max-height: 310px;
-    overflow: scroll;
+    overflow-y: scroll;
 
     border-radius: $borderRad;
     box-shadow: 1px 1px 5px inset rgba(128, 128, 128, 0.619);
